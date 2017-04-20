@@ -8,7 +8,7 @@ namespace Mandala
     public partial class Form1 : Form
     {
         private readonly List<TriangularPictureBox> triangles = new List<TriangularPictureBox>();
-        private Color color = Color.Red;
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Mandala
 
             foreach (var triangle in triangles)
             {
-                triangle.DrawPoint((sender as TriangularPictureBox).State, e.Location.X, e.Location.Y, color);
+                triangle.DrawPoint((sender as TriangularPictureBox).State, e.Location.X, e.Location.Y);
             }
             
         }

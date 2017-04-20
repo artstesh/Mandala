@@ -46,13 +46,13 @@ namespace Mandala
             }
         }
 
-        public void DrawPoint(int senderState, int x, int y, Color color)
+        public void DrawPoint(int senderState, int x, int y)
         {
             var g = CreateGraphics();
             if (Math.Abs(State - senderState) % 2 == 0)
-                g.DrawEllipse(new Pen(color, 1), GetX(x, senderState), GetY(y, senderState), 3, 3);
+                g.DrawEllipse(new Pen(Brushes.Red, 1), GetX(x, senderState), GetY(y, senderState), 3, 3);
             else
-                g.DrawEllipse(new Pen(color, 1), GetX(y, senderState), GetY(x, senderState), 3, 3);
+                g.DrawEllipse(new Pen(Brushes.Red, 1), GetX(y, senderState), GetY(x, senderState), 3, 3);
             
         }
 
